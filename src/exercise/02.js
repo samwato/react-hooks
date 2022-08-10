@@ -3,31 +3,67 @@
 
 import * as React from 'react'
 
-function Greeting({initialName = ''}) {
-  // 🐨 initialize the state to the value from localStorage
-  // 💰 window.localStorage.getItem('name') ?? initialName
-  const [name, setName] = React.useState(initialName)
+const useLocalStorageState = (
+  key,
+  defaultValue = '',
+  {serialize = JSON.stringify, deserialize = JSON.parse} = {}
+) => {
 
-  // 🐨 Here's where you'll use `React.useEffect`.
-  // The callback should set the `name` in localStorage.
-  // 💰 window.localStorage.setItem('name', name)
+  const [state, setState] = React.useState(
+    () => {
+      const valueInLocalStorage = window.localStorage.getItem(key)
+      if (valueInLocalStorage) {
+        return deserialize(valueInLocalStorage)
+      }
+      return typeof defaultValue === 'function' ? defaultValue() : defaultValue
+    }
+  )
+
+  const prevKeyRef = React.useRef(key)
+
+  React.useEffect(() => {
+    const prevKey = prevKeyRef.current
+    if (prevKey !== key) {
+      window.localStorage.removeItem(prevKey)
+    }
+    prevKeyRef.current = key
+    window.localStorage.setItem(key, serialize(state))
+  }, [key, serialize, state])
+
+  return [state, setState]
+}
+
+function Greeting({ initialUserInfo = {}}) {
+
+  const [userInfo, setUserInfo] = useLocalStorageState('username', initialUserInfo)
+
 
   function handleChange(event) {
-    setName(event.target.value)
+    const { name, value } = event.target
+    setUserInfo({ ...userInfo, [name]: value })
   }
+
   return (
     <div>
       <form>
-        <label htmlFor="name">Name: </label>
-        <input value={name} onChange={handleChange} id="name" />
+        <div>
+          <label htmlFor="firstname">First Name: </label>
+          <input value={userInfo.firstName} onChange={handleChange} name="firstName" id="firstname" />
+        </div>
+        <div>
+          <label htmlFor="lastname">Last Name: </label>
+          <input value={userInfo.lastName} onChange={handleChange} name="lastName" id="lastname" />
+        </div>
       </form>
-      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+      {userInfo ? <strong>Hello {userInfo.firstName} {userInfo.lastName}</strong> : 'Please type your name'}
     </div>
   )
 }
 
 function App() {
-  return <Greeting />
+  return (
+    <Greeting />
+  )
 }
 
 export default App
