@@ -430,6 +430,51 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Insidiae",
+      "name": "Kobe Ruado",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28495550?v=4",
+      "profile": "https://github.com/Insidiae",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "prasanthlouis",
+      "name": "Prasanth Louis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8705429?v=4",
+      "profile": "https://www.linkedin.com/in/prasanthlouis/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "SherylHohman",
+      "name": "Sheryl Hohman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8204778?v=4",
+      "profile": "https://stackoverflow.com/users/5411817/sherylhohman?tab=topactivity",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "VictoriaVasys",
+      "name": "Victoria Vasys",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10079657?v=4",
+      "profile": "https://www.victoriavasys.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ImElan",
+      "name": "Elan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59192383?v=4",
+      "profile": "https://github.com/ImElan",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

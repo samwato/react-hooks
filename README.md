@@ -24,6 +24,7 @@
 [![All Contributors][all-contributors-badge]](#contributors-)
 [![GPL 3.0 License][license-badge]][license]
 [![Code of Conduct][coc-badge]][coc]
+[![Gitpod ready-to-code][gitpod-badge]](https://gitpod.io/#https://github.com/kentcdodds/react-hooks)
 <!-- prettier-ignore-end -->
 
 ## Prerequisites
@@ -32,10 +33,28 @@
   [Why React Hooks](https://www.youtube.com/watch?v=zWsZcBiwgVE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
   (35 minutes)
 
+> NOTE: The EpicReact.dev videos were recorded with React version ^16.13 and all
+> material in this repo has been updated to React version ^18. Differences are
+> minor and any relevant differences are noted in the instructions.
+
+
+## Quick start
+
+It's recommended you run everything in the same environment you work in every
+day, but if you don't want to set up the repository locally, you can get started
+in one click with [Gitpod](https://gitpod.io),
+[CodeSandbox](https://codesandbox.io/s/github/kentcdodds/react-hooks), or
+by following the [video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)
+instructions for [GitHub Codespaces](https://github.com/features/codespaces).
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kentcdodds/react-hooks)
+
+For a local development environment, follow the instructions below
+
 ## System Requirements
 
 - [git][git] v2.13 or greater
-- [NodeJS][node] `12 || 14 || 15 || 16 || 17`
+- [NodeJS][node] `14 || 16 || 18`
 - [npm][npm] v6 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
@@ -60,7 +79,7 @@ variable and how to fix it here for [windows][win-path] or
 After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 
-```
+```shell
 git clone https://github.com/kentcdodds/react-hooks.git
 cd react-hooks
 node setup
@@ -78,7 +97,7 @@ it's a lot).
 If you can't get the setup script to work, then just make sure you have the
 right versions of the requirements listed above, and run the following commands:
 
-```
+```shell
 npm install
 npm run validate
 ```
@@ -86,15 +105,9 @@ npm run validate
 If you are still unable to fix issues and you know how to use Docker 🐳 you can
 setup the project with the following command:
 
-```
+```shell
 docker-compose up
 ```
-
-It's recommended you run everything locally in the same environment you work in
-every day, but if you're having issues getting things set up, you can also set
-this up using [GitHub Codespaces](https://github.com/features/codespaces)
-([video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)) or
-[Codesandbox](https://codesandbox.io/s/github/kentcdodds/react-hooks).
 
 ## Running the app
 
@@ -226,6 +239,13 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://mokajima.com/"><img src="https://avatars.githubusercontent.com/u/10166985?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Misaki Okajima</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=mokajima" title="Code">💻</a> <a href="https://github.com/kentcdodds/react-hooks/commits?author=mokajima" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/marioleed"><img src="https://avatars.githubusercontent.com/u/1763448?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mario Sannum</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=marioleed" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jaquinocode"><img src="https://avatars.githubusercontent.com/u/28276675?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jaquinocode</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/issues?q=author%3Ajaquinocode" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/Insidiae"><img src="https://avatars.githubusercontent.com/u/28495550?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kobe Ruado</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=Insidiae" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/prasanthlouis/"><img src="https://avatars.githubusercontent.com/u/8705429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Prasanth Louis</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=prasanthlouis" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://stackoverflow.com/users/5411817/sherylhohman?tab=topactivity"><img src="https://avatars.githubusercontent.com/u/8204778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sheryl Hohman</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=SherylHohman" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.victoriavasys.com/"><img src="https://avatars.githubusercontent.com/u/10079657?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Victoria Vasys</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=VictoriaVasys" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ImElan"><img src="https://avatars.githubusercontent.com/u/59192383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elan</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=ImElan" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -255,6 +275,7 @@ Thank you! https://kcd.im/rh-ws-feedback
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
 [license]: https://github.com/kentcdodds/react-hooks/blob/main/LICENSE
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[gitpod-badge]: https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod
 [coc]: https://github.com/kentcdodds/react-hooks/blob/main/CODE_OF_CONDUCT.md
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
 [all-contributors]: https://github.com/kentcdodds/all-contributors
